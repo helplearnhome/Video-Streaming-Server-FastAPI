@@ -1,6 +1,4 @@
 # fastapi_app.py 
-import uvicorn
-
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles 
@@ -13,11 +11,11 @@ app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
 @app.get("/", response_class=HTMLResponse)
-'''
-This is a HTML Response. Which has the html template to play the stream.
-'''
 async def index(request: Request):
-   return templates.TemplateResponse('index.html', {"request": request})
+    '''
+    This is a HTML Response. Which has the html template to play the stream.
+    '''
+    return templates.TemplateResponse('index.html', {"request": request})
 
 def gen(camera):
     """Video streaming generator function."""

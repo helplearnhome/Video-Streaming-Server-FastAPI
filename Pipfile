@@ -5,10 +5,8 @@ name = "pypi"
 
 [packages]
 fastapi = "*"
-uvicorn = {extras = ["standard"], version = "*"}
+uvicorn = "*"
 opencv-python = "*"
-aiofiles = "*"
-jinja2 = "*"
 
 [dev-packages]
 
